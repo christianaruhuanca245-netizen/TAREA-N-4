@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, m, c, d, u;
+    cout << "Ingrese numero de 4 digitos: ";
+    cin >> num;
+
+    if (num < 1000 || num > 9999) {
+        cout << "No es de 4 digitos";
+        return 0;
+    }
+
+    m = num / 1000;          
+    c = (num / 100) % 10;    
+    d = (num / 10) % 10;      
+    u = num % 10;             
+
+    if (m == u && c == d) {
+        cout << num << " es capicua";
+    } else {
+        cout << num << " NO es capicua";
+    }
+    return 0;
+}
